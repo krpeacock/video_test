@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "video_test": {
+      "main": "src/video_test/main.mo",
+      "type": "motoko"
+    },
+    "video_test_assets": {
+      "dependencies": [
+        "video_test"
+      ],
+      "frontend": {
+        "entrypoint": "src/video_test_assets/src/index.html"
+      },
+      "source": [
+        "src/video_test_assets/assets",
+        "dist/video_test_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.3-33-gde15c888",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
